@@ -676,25 +676,40 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .insurance-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
-.insurance-badge {
+.insurance-logo-card {
   background: white;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 14px;
+  padding: 16px 12px 12px;
   text-align: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 8px;
   transition: var(--transition);
 }
-.insurance-badge i { color: var(--primary); }
-.insurance-badge:hover { border-color: var(--primary); }
+.insurance-logo-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+.insurance-logo-card img {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.insurance-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+.logo-fallback {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding: 8px 0;
+}
 
 /* ===================== APPOINTMENT ===================== */
 .appointment-grid {
@@ -906,7 +921,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   .spine-hub-grid { grid-template-columns: 1fr; }
   .spine-hub-visual { display: none; }
   .appointment-grid { grid-template-columns: 1fr; }
-  .insurance-grid { grid-template-columns: repeat(4, 1fr); }
+  .insurance-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(5, 1fr); }
 }
@@ -964,7 +979,9 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 
   .testimonials-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .insurance-grid { grid-template-columns: repeat(2, 1fr); }
+  .insurance-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .insurance-logo-card img { height: 32px; }
+  .insurance-name { font-size: 0.68rem; }
   .footer-grid { grid-template-columns: 1fr; }
 
   .whatsapp-float { bottom: 80px; right: 16px; width: 52px; height: 52px; font-size: 1.5rem; }
