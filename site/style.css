@@ -231,9 +231,28 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .hero-inner {
   position: relative;
 }
+.hero-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
 .hero-content {
   max-width: 720px;
   animation: fadeInUp 0.8s ease-out;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+  border: 3px solid rgba(255, 255, 255, 0.15);
 }
 .hero-badge {
   display: inline-block;
@@ -502,6 +521,13 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .doctor-card:hover { box-shadow: var(--shadow-lg); }
 .doctor-card.featured { border-color: var(--primary-light); }
 .doctor-img { position: relative; flex-shrink: 0; }
+.doctor-photo {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius);
+}
 .doctor-img-placeholder {
   width: 140px;
   height: 170px;
@@ -913,6 +939,8 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   .logo-text-img { height: 34px; }
 
   .hero-banner { padding: 32px 0 24px; }
+  .hero-columns { grid-template-columns: 1fr; gap: 24px; }
+  .hero-image img { max-width: 320px; }
   .hero-banner h1 { font-size: 1.6rem; }
   .hero-cta { flex-direction: column; }
   .hero-trust-bar { flex-direction: column; gap: 10px; }
@@ -930,6 +958,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 
   .specialities-grid { grid-template-columns: 1fr; }
   .doctor-card { flex-direction: column; align-items: center; text-align: center; }
+  .doctor-photo { width: 120px; height: 140px; }
   .doctor-img-placeholder { width: 120px; height: 140px; }
   .doctor-highlights { justify-content: center; }
 
