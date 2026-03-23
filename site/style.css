@@ -1048,6 +1048,21 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 
 /* ===================== INSURANCE ===================== */
 .insurance-section { background: var(--bg-alt); }
+.insurance-category {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 32px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.insurance-category:first-of-type { margin-top: 0; }
+.insurance-category i {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
 .insurance-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
