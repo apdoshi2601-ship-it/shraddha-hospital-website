@@ -219,7 +219,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   background: linear-gradient(135deg, #2A1020 0%, #7B2240 50%, #A83258 100%);
   color: white;
   overflow: hidden;
-  padding: 48px 0 32px;
+  padding: 0;
 }
 .hero-bg {
   position: absolute;
@@ -235,24 +235,24 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: center;
+  align-items: stretch;
 }
 .hero-content {
   max-width: 720px;
   animation: fadeInUp 0.8s ease-out;
+  padding: 48px 0 32px;
 }
 .hero-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 .hero-image img {
   width: 100%;
-  max-width: 480px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
-  border: 3px solid rgba(255, 255, 255, 0.15);
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 .hero-badge {
   display: inline-block;
@@ -288,7 +288,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding: 20px 0 24px;
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 .trust-item {
@@ -1459,9 +1459,10 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   .logo-icon-img { height: 40px; }
   .logo-text-img { height: 34px; }
 
-  .hero-banner { padding: 32px 0 24px; }
+  .hero-banner { padding: 0; }
+  .hero-content { padding: 32px 0 24px; }
   .hero-columns { grid-template-columns: 1fr; gap: 24px; }
-  .hero-image img { max-width: 320px; }
+  .hero-image img { max-height: 300px; width: 100%; }
   .hero-banner h1 { font-size: 1.6rem; }
   .hero-cta { flex-direction: column; }
   .hero-trust-bar { flex-direction: column; gap: 10px; }
