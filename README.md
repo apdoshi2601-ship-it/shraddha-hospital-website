@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shraddha Hospitals — Patient Platform
+
+Website + patient platform for **Shraddha Institute of Spine & Orthopaedic Superspeciality (SISOS)**, Sangli, Maharashtra.
+
+**Live:** https://shraddha-hospitals-production.up.railway.app
+
+## Features
+
+- **Homepage** — 14 sections with real doctor photos, insurance logos, spine hub with fellowship programme
+- **Booking System** (`/book`) — Live doctor calendar, slot availability, appointment creation with token assignment
+- **OPD Queue** (`/queue`) — Real-time queue display with Server-Sent Events, priority reservation
+- **Admin Panel** (`/admin/queue-control`) — Queue management, walk-in addition, patient advancement
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router, TypeScript)
+- **Styling:** Tailwind CSS
+- **Database:** Neon PostgreSQL (17 tables, 9 doctors seeded)
+- **Hosting:** Railway
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev  # → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requires `.env.local` with `DATABASE_URL` pointing to a Neon PostgreSQL database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+railway up --detach
+```
 
-## Learn More
+## Branches
 
-To learn more about Next.js, take a look at the following resources:
+- `main` — Static site (apdoshi) + raw assets
+- `nextjs-platform` — Next.js patient platform (active development)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Team
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **apdoshi** — Static site, raw assets (doctor photos, insurance logos, hospital images)
+- **ChDo17** — Next.js platform, database, booking/queue systems
