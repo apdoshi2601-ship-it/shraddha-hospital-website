@@ -74,39 +74,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Visual card */}
-          <div className="hidden lg:flex justify-center">
-            <div className="relative bg-white rounded-2xl shadow-card-hover p-8 max-w-sm w-full border border-border/50">
-              <div className="flex flex-col items-center text-center mb-6">
-                <Image
-                  src="/images/logo.png"
-                  alt="SISOS Logo"
-                  width={80}
-                  height={80}
-                  className="h-16 w-auto mb-3"
-                />
-                <Image
-                  src="/images/logo-text.png"
-                  alt="Shraddha Institute"
-                  width={200}
-                  height={50}
-                  className="h-12 w-auto"
-                />
-              </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {[
-                  { num: "32+", label: "Years" },
-                  { num: "50K+", label: "Surgeries" },
-                  { num: "75", label: "Beds" },
-                ].map((stat) => (
-                  <div key={stat.label} className="bg-surface-alt rounded-xl p-4">
-                    <div className="text-2xl font-bold text-primary font-display">
-                      {stat.num}
-                    </div>
-                    <div className="text-xs text-text-muted mt-1">{stat.label}</div>
+          {/* Hospital Image + Stats */}
+          <div className="hidden lg:flex flex-col gap-4 justify-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-card-hover">
+              <Image
+                src="/images/hospital-hero.webp"
+                alt="SISOS New Facility — Kolhapur-Sangli Highway"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+            <div className="grid grid-cols-3 gap-4 text-center">
+              {[
+                { num: "32+", label: "Years" },
+                { num: "50K+", label: "Surgeries" },
+                { num: "75", label: "Beds" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white rounded-xl p-4 border border-border/50 shadow-card">
+                  <div className="text-2xl font-bold text-primary font-display">
+                    {stat.num}
                   </div>
-                ))}
-              </div>
+                  <div className="text-xs text-text-muted mt-1">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

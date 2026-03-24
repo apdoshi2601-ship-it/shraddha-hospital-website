@@ -20,7 +20,7 @@ export default function About() {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/images/hospital-building.png"
+              src="/images/gallery/front-view.png"
               alt="Shraddha Institute of Spine and Orthopaedic Superspeciality — New Facility"
               width={600}
               height={400}
